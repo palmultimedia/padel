@@ -7,6 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
-driver.get('https://www.worldpadeltour.com/')
-
+class Scraper:
+    def __init__(self, url: str='https://www.worldpadeltour.com/'):
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        self.driver.get(url)
